@@ -1,0 +1,21 @@
+{
+  "name": "custom-application",
+  "version": "1.0.0",
+  "description": "A custom web application",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run build && vercel build && vercel dev",
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf build",
+    "compile": "cp index.html build && cp style.css build && cp script.js build"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "vercel": "^24.2.4"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
